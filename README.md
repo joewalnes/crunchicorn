@@ -31,30 +31,30 @@ $ npm install -g webtoolz
 Run:
 
 ```bash
-$ webtoolz out/myapp
+$ webtoolz myapp.js src/
 ```
 
 Usage:
 
 ```
-webtoolz OUTPUT INPUT [INPUT...]
+webtoolz OUTPUT DIR [DIR...]
 
-OUTPUT        Output JS file. This will also include auto-injected CSS.
+OUTPUT              Output JS file. This will also include auto-injected CSS. Use '-'
+                    for stdout.
 
-INPUT         Input source file or directory. If directory, will be recursively
-              searched for .js and .css files. Glob patterns will be expanded.
-              This option can be specified multiple times to search multiple dirs.
+DIR                 Input directory. Multiple directories may be specified. All .js, .jsx,
+                    and .css files under the tree will be processed.
 
 Options:
 
---test              Source file or directory to run unit tests for. If directory, will be
+--test              Source file or directory to run unit tests. If directory, will be
                     recursively searched for .js files. Glob patterns will be expanded.
                     This option can be specified multiple times to search multiple dirs.
 
 --[no]minify        Whether to minify results or not. Default is to write both minified
                     and unminified with source maps.
 
--e --exclude        Patterns to exclude (may contain globs).
+-e --exclude        Patterns to exclude in DIR (may contain globs).
 
 -i --include        Override --exclude.
 
