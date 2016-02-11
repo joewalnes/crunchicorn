@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "script": {
+    "build": "webtoolz public/app.js src --standard",
+    "clean": "rm -f public/app.js"
+  },
+  "dependencies": {
+    "react": "^0.14",
+    "react-dom": "^0.14"
+  },
+  "devDependencies" : {
+    "webtoolz": "*"
+  }
+}

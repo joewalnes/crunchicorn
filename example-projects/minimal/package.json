@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "script": {
+    "build": "webtoolz public/app.js src --standard",
+    "clean": "rm -f public/app.js"
+  },
+  "dependencies": {
+  },
+  "devDependencies" : {
+    "webtoolz": "*"
+  }
+}

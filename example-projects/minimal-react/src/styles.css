@@ -1,0 +1,12 @@
+/**
+ * To add third party libs (e.g. bootstrap, basscss, etc),
+ * include them as dependencies in package.json and
+ * @import them here.
+ *
+ * e.g.
+ * @import 'basscss';
+ */
+
+body {
+  font-family: sans-serif;
+}
