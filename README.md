@@ -6,7 +6,7 @@ The JavaScript ecosystem is complex and continually evolving. This is an attempt
 * Provide an out-of-the-box toolchain for JS/CSS projects
 * Highly opinionated sensible defaults
 * No config files
-* Command line tool
+* Command line tool (plays well with other tools, including shell scripts, make, npm run, etc)
 * Minimal options
 
 The cast:
