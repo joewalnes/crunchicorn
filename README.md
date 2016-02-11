@@ -22,10 +22,18 @@ The cast:
 Usage
 -----
 
-Install:
+Install globally:
 
 ```bash
 $ npm install -g webtoolz
+$ webtoolz -h              # run it
+```
+
+Alternatively, install just for your current project:
+
+```bash
+$ npm install --save-dev webtoolz
+$ $(npm bin)/webtoolz -h   # run it, using npm local bin path
 ```
 
 Run:
@@ -45,31 +53,41 @@ OUTPUT              Output JS file. This will also include auto-injected CSS. Us
 DIR                 Input directory. Multiple directories may be specified. All .js, .jsx,
                     and .css files under the tree will be processed.
 
-Options:
 
---test              Source file or directory to run unit tests. If directory, will be
+
+Common options:
+
+-h --help           This.
+
+-w --watch          Keep running and automatically rebuild when any dependency changes.
+
+-t --test FILE      Source file or directory to run unit tests. If directory, will be
                     recursively searched for .js files. Glob patterns will be expanded.
                     This option can be specified multiple times to search multiple dirs.
-
---[no]minify        Whether to minify results or not. Default is to write both minified
-                    and unminified with source maps.
-
--e --exclude        Patterns to exclude in DIR (may contain globs).
-
--i --include        Override --exclude.
-
---babelpreset       Babel preset to use. See https://babeljs.io/docs/plugins/.
-                    Default is 'es2015', unless .jsx files are present, in which case
-                    it's 'react'.
-
---babelplugin       Additional Babel plugins to use. See https://babeljs.io/docs/plugins/.
-                    Default is none (relies on babelpreset). This option can be specified
-                    multiple times to include multiple plugins.
 
 --[semi]standard    Fail if code does not meet coding standards. See http://standardjs.com
                     'standard' enforces no semicolons, 'semistandard' enforces semicolons.
 
--w --watch          Keep running and automatically rebuild when any dependency changes.
+
+
+Advanced options:
 
 -v --verbose        Show what's going on under the hood.
+
+--[no]minify        Whether to minify results or not. Default is to write both minified
+                    and unminified with source maps.
+
+-e --exclude PAT    Patterns to exclude in DIR (may contain globs).
+
+-i --include PAT    Override --exclude.
+
+--babelpreset PRES  Babel preset to use. See https://babeljs.io/docs/plugins/.
+                    Default is 'es2015', unless .jsx files are present, in which case
+                    it's 'react'.
+
+--babelplugin PLUG  Additional Babel plugins to use. See https://babeljs.io/docs/plugins/.
+                    Default is none (relies on babelpreset). This option can be specified
+                    multiple times to include multiple plugins.
+
+
 ```
