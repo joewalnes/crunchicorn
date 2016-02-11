@@ -10,16 +10,6 @@ The JavaScript ecosystem is complex and continually evolving. This is an attempt
 * 'Batteries included' toolchain: ES2015 (and more) transpiling, enforce coding standards, module packaging, shrinking, testing, CSS pre-processing
 * Designed for browser apps - you don't need to know NodeJS
 
-The cast:
-
-* enforce JS coding standards with [StandardJS](http://standardjs.com/)
-* transpile JS with [Babel](https://babeljs.io)
-* bundle and shrink JS with [Rollup](http://rollupjs.org)
-* run JS unit tests with [Mocha](https://mochajs.org/)
-* minify JS with [Uglify](http://lisperator.net/uglifyjs/)
-* transpile CSS with [postcss](https://github.com/postcss/postcss)
-* minify CSS with [cssnano](http://cssnano.co/)
-
 Usage
 -----
 
@@ -82,7 +72,7 @@ Advanced options:
 
 -i --include PAT    Override --exclude.
 
---babelpreset PRES  Babel preset to use. See https://babeljs.io/docs/plugins/.
+--babelpreset PRES  Babel preset to use for transpiling JS. See https://babeljs.io/docs/plugins/.
                     Default is 'es2015', unless .jsx files are present, in which case
                     it's 'react'.
 
@@ -92,3 +82,15 @@ Advanced options:
 
 
 ```
+
+Under the hood
+--------------
+
+* enforce JS coding standards with [StandardJS](http://standardjs.com/)
+* transpile JS with [Babel](https://babeljs.io)
+* bundle and shrink JS with [Rollup](http://rollupjs.org)
+* run JS unit tests with [Mocha](https://mochajs.org/)
+* minify JS with [Uglify](http://lisperator.net/uglifyjs/)
+* transpile CSS with [postcss](https://github.com/postcss/postcss)
+* minify CSS with [cssnano](http://cssnano.co/)
+
