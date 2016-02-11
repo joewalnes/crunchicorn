@@ -68,6 +68,10 @@ Advanced options:
 --[no]minify        Whether to minify results or not. Default is to write both minified
                     and unminified with source maps.
 
+--[no]pretty        Whether to use human friendly pretty output (colors, progress bars, ascii art,
+                    etc). Defaults to pretty is used from a TTY (e.g. terminal) or nopretty if
+                    no terminal (e.g. unattended script, build server...).
+
 -e --exclude PAT    Patterns to exclude in DIR (may contain globs).
 
 -i --include PAT    Override --exclude.
