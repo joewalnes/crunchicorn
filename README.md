@@ -33,8 +33,19 @@ Alternatively, install just for your current project:
 
 ```bash
 $ npm install --save-dev crunchicorn 
-# Note: You will need to include node_module/.bin in your path
 ```
+
+Or in `package.json`:
+
+```json
+{
+  "dependencies": {
+     "crunchicorn": "*"
+  }
+}
+```
+
+Note: If not installed globally, you'll need to include node_module/.bin in your path
 
 10 second tutorial
 ------------------
