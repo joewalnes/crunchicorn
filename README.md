@@ -20,6 +20,34 @@ crunchicorn takes two arguments:
 
 crunchicorn was born out of frustration with how complicated it is to get JavaScript tooling setup for real world projects.
 
+10 second tutorial
+------------------
+
+Assuming you keep your soure tree in `src/`, which contains ES2015 syntax code, imports, CSS, etc, and the entry point is `src/myapp.js`.
+
+This single command (no config necessary) will do everything to validate, transpile, resolve modules, drop dead code, and compress into a single file:
+
+```bash
+$ crunch-webapp src/myapp.js out/myapp.js
+```
+
+The resulting file is now ready to be used directly in your web-app. It will even inject your CSS:
+
+```html
+<script src="myapp.js"></script>
+```
+
+Voila. No config - it just worked.
+
+File watching
+-------------
+
+You can leave crunchicorn running and it will automatically rebuild whenever it notices any files have changed:
+
+```bash
+$ crunch-webapp --watch src/myapp.js out/myapps.js
+```
+
 Install
 -------
 
@@ -46,32 +74,6 @@ Or in `package.json`:
 ```
 
 Note: If not installed globally, you'll need to include node_module/.bin in your path
-
-10 second tutorial
-------------------
-
-Assuming you keep your soure tree in `src/`, which contains ES2015 syntax code, imports, CSS, etc, and the entry point is `src/myapp.js`.
-
-This single command (no config necessary) will do everything to validate, transpile, resolve modules, drop dead code, and compress into a single file:
-
-```bash
-$ crunch-webapp src/myapp.js out/myapp.js
-```
-
-The resulting file is now ready to be used directly in your web-app. It will even inject your CSS:
-
-```html
-<script src="myapp.js"></script>
-```
-
-File watching
--------------
-
-You can leave crunchicorn running and it will automatically rebuild whenever it notices any files have changed:
-
-```bash
-$ crunch-webapp --watch src/myapp.js out/myapps.js
-```
 
 Reference
 ---------
