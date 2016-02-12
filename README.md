@@ -37,7 +37,13 @@ The resulting file is now ready to be used directly in your web-app. It will eve
 <script src="myapp.js"></script>
 ```
 
-Voila. No config - it just worked.
+Voila. No config - it just worked!
+
+Example projects
+----------------
+
+[Here](/example-projects/)
+
 
 File watching
 -------------
