@@ -37,21 +37,26 @@ Run:
 
 ```bash
 # Compile once
-$ webtoolz src/myapp.js out/myapp.js
+$ webtoolz webapp src/myapp.js out/myapp.js
 
 # Compile continuously whenever a file changes
-$ webtoolz --watch src/myapp.js out/myapps.js
+$ webtoolz webapp --watch src/myapp.js out/myapps.js
 ```
 
 Usage:
 
 ```
-webtoolz ENTRYPOINT OUTPUT [... options]
+webtoolz [webapp|weblib] [... options] ENTRYPOINT OUTPUT
+
+webapp              Build for use in a browser. Result can be included in <script src="...">.
+
+weblib                 Build into self-contained library, that can be imported into other
+                    projects as a regular ES6 module.
 
 ENTRYPOINT          Entry point to your app (.js). Any dependencies (including CSS)
                     will be discovered by walking the imports.
 
-OUTPUT              Output JS file. This will also include auto-injected CSS. Use '-'
+OUTPUT              Output JS file. For a webapp, this will also include auto-injected CSS. Use '-'
                     for stdout.
 
 
