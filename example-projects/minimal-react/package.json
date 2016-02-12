@@ -1,7 +1,7 @@
 {
   "private": true,
   "script": {
-    "build": "webtoolz src/app.js public/app.js --standard",
+    "build": "crunch-webapp src/app.js public/app.js",
     "clean": "rm -f public/app.js"
   },
   "dependencies": {
@@ -9,6 +9,6 @@
     "react-dom": "^0.14"
   },
   "devDependencies" : {
-    "webtoolz": "*"
+    "crunchicorn": "*"
   }
 }

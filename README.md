@@ -1,5 +1,5 @@
-webtoolz : Simplifying the web toolchain
-========================================
+crunchicorn: Simplifying the web toolchain
+==========================================
 
 The JavaScript ecosystem is complex and continually evolving. This is an attempt to simplify it. Goals of this project:
 
@@ -10,12 +10,12 @@ The JavaScript ecosystem is complex and continually evolving. This is an attempt
 * 'Batteries included' toolchain: ES2015 (and more) transpiling, enforce coding standards, ES import module packaging, shrinking, testing, CSS pre-processing
 * Designed for browser apps - you don't need to know NodeJS
 
-webtoolz takes two arguments:
+crunchicorn takes two arguments:
 1. An entry point .js for your app in a source tree consisting of ES2015 code, modules, CSS, etc.
 2. An output .js file that can be included in your final web page with a single `<script src=...>` element. Transpiled,
    resolved, validated, crunched, everything.
 
-webtoolz was born out of frustration with how complicated it is to get JavaScript tooling setup for real world projects.
+crunchicorn was born out of frustration with how complicated it is to get JavaScript tooling setup for real world projects.
 
 Usage
 -----
@@ -23,34 +23,34 @@ Usage
 Install globally:
 
 ```bash
-$ npm install -g webtoolz
+$ npm install -g crunchicorn
 ```
 
 Alternatively, install just for your current project:
 
 ```bash
-$ npm install --save-dev webtoolz
-# Note: You will need to call $(npm bin)/webtoolz to run it
+$ npm install --save-dev crunchicorn 
+# Note: You will need to include node_module/.bin in your path
 ```
 
 Run:
 
 ```bash
 # Compile once
-$ webtoolz webapp src/myapp.js out/myapp.js
+$ crunch-webapp src/myapp.js out/myapp.js
 
 # Compile continuously whenever a file changes
-$ webtoolz webapp --watch src/myapp.js out/myapps.js
+$ crunch-webapp --watch src/myapp.js out/myapps.js
 ```
 
 Usage:
 
 ```
-webtoolz [webapp|weblib] [... options] ENTRYPOINT OUTPUT
+[crunch-webapp|crunch-lib] [... options] ENTRYPOINT OUTPUT
 
-webapp              Build for use in a browser. Result can be included in <script src="...">.
+crunch-webapp       Build for use in a browser. Result can be included in <script src="...">.
 
-weblib                 Build into self-contained library, that can be imported into other
+crunch-lib          Build into self-contained library, that can be imported into other
                     projects as a regular ES6 module.
 
 ENTRYPOINT          Entry point to your app (.js). Any dependencies (including CSS)
