@@ -10,6 +10,13 @@ The JavaScript ecosystem is complex and continually evolving. This is an attempt
 * 'Batteries included' toolchain: ES2015 (and more) transpiling, enforce coding standards, ES import module packaging, shrinking, testing, CSS pre-processing
 * Designed for browser apps - you don't need to know NodeJS
 
+webtoolz takes two arguments:
+1. An entry point .js for your app in a source tree consisting of ES2015 code, modules, CSS, etc.
+2. An output .js file that can be included in your final web page with a single `<script src=...>` element. Transpiled,
+   resolved, validated, crunched, everything.
+
+webtoolz was born out of frustration with how complicated it is to get JavaScript tooling setup for real world projects.
+
 Usage
 -----
 
@@ -56,8 +63,9 @@ Common options:
                     recursively searched for .js files. Glob patterns will be expanded.
                     This option can be specified multiple times to search multiple dirs.
 
---[semi]standard    Fail if code does not meet coding standards. See http://standardjs.com
-                    'standard' enforces no semicolons, 'semistandard' enforces semicolons.
+--[semi|no]standard Fail if code does not meet coding standards. See http://standardjs.com
+                    'standard' enforces no semicolons, 'semistandard' enforces semicolons,
+                    'nostandard' bypasses checks. Default is --standard.
 
 
 
@@ -72,9 +80,9 @@ Advanced options:
                     etc). Defaults to pretty is used from a TTY (e.g. terminal) or nopretty if
                     no terminal (e.g. unattended script, build server...).
 
--e --exclude PAT    Patterns to exclude in DIR (may contain globs).
+-e --exclude PATT   Patterns to exclude in DIR (may contain globs).
 
--i --include PAT    Override --exclude.
+-i --include PATT   Override --exclude.
 
 --babelpreset PRES  Babel preset to use for transpiling JS. See https://babeljs.io/docs/plugins/.
                     Default is 'es2015', unless .jsx files are present, in which case
@@ -92,7 +100,7 @@ Under the hood
 
 * enforce JS coding standards with [StandardJS](http://standardjs.com/)
 * transpile JS with [Babel](https://babeljs.io)
-* bundle and shrink JS with [Rollup](http://rollupjs.org)
+* bundle ES6 modules and shrink JS with [Rollup](http://rollupjs.org)
 * run JS unit tests with [Mocha](https://mochajs.org/)
 * minify JS with [Uglify](http://lisperator.net/uglifyjs/)
 * transpile CSS with [postcss](https://github.com/postcss/postcss)
