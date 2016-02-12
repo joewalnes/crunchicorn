@@ -7,7 +7,7 @@ The JavaScript ecosystem is complex and continually evolving. This is an attempt
 * Highly opinionated sensible defaults
 * Command line tool (plays well with other tools, including shell scripts, make, npm run, etc)
 * No config files
-* 'Batteries included' toolchain: ES2015 (and more) transpiling, enforce coding standards, module packaging, shrinking, testing, CSS pre-processing
+* 'Batteries included' toolchain: ES2015 (and more) transpiling, enforce coding standards, ES import module packaging, shrinking, testing, CSS pre-processing
 * Designed for browser apps - you don't need to know NodeJS
 
 Usage
@@ -30,19 +30,19 @@ $ $(npm bin)/webtoolz -h   # run it, using npm local bin path
 Run:
 
 ```bash
-$ webtoolz myapp.js src/
+$ webtoolz src/myapp.js out/myapp.js
 ```
 
 Usage:
 
 ```
-webtoolz OUTPUT DIR [DIR...]
+webtoolz ENTRYPOINT OUTPUT [... options]
+
+ENTRYPOINT          Entry point to your app (.js). Any dependencies (including CSS)
+                    will be discovered by walking the imports.
 
 OUTPUT              Output JS file. This will also include auto-injected CSS. Use '-'
                     for stdout.
-
-DIR                 Input directory. Multiple directories may be specified. All .js, .jsx,
-                    and .css files under the tree will be processed.
 
 
 
