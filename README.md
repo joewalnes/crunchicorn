@@ -24,20 +24,23 @@ Install globally:
 
 ```bash
 $ npm install -g webtoolz
-$ webtoolz -h              # run it
 ```
 
 Alternatively, install just for your current project:
 
 ```bash
 $ npm install --save-dev webtoolz
-$ $(npm bin)/webtoolz -h   # run it, using npm local bin path
+# Note: You will need to call $(npm bin)/webtoolz to run it
 ```
 
 Run:
 
 ```bash
+# Compile once
 $ webtoolz src/myapp.js out/myapp.js
+
+# Compile continuously whenever a file changes
+$ webtoolz --watch src/myapp.js out/myapps.js
 ```
 
 Usage:
