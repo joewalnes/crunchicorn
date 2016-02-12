@@ -11,7 +11,7 @@ The JavaScript ecosystem is complex and continually evolving. This is an attempt
 * 'Batteries included' toolchain: ES2015 (and more) transpiling, enforce coding standards, ES import module packaging, shrinking, testing, CSS pre-processing
 * Designed for browser apps - you don't need to know NodeJS
 * Agnostic about client side frameworks (use React, Angular, jQuery, Polymer, Ember, nothing... it doesn't care)
-* Zero server-side code requirements: it just compiles your client side code. It's up to you what you use on the server (Rails, Node, Go, Java, ASP.NET, PHP...)
+* No server-side coupling: it just compiles your client side code. It's up to you what you use on the server (Rails, Node, Go, Java, ASP.NET, PHP, static webserver...)
 
 crunchicorn takes two arguments:
 1. An entry point .js for your app in a source tree consisting of ES2015 code, modules, CSS, etc.
