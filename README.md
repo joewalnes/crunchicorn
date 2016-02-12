@@ -34,8 +34,8 @@ $ npm install --save-dev crunchicorn
 # Note: You will need to include node_module/.bin in your path
 ```
 
-Run
----
+10 second tutorial
+------------------
 
 Assuming you keep your soure tree in `src/`, which contains ES2015 syntax code, imports, CSS, etc, and the entry point is `src/myapp.js`.
 
