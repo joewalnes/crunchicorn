@@ -18,8 +18,8 @@ crunchicorn takes two arguments:
 
 crunchicorn was born out of frustration with how complicated it is to get JavaScript tooling setup for real world projects.
 
-Usage
------
+Install
+-------
 
 Install globally:
 
@@ -34,17 +34,36 @@ $ npm install --save-dev crunchicorn
 # Note: You will need to include node_module/.bin in your path
 ```
 
-Run:
+Run
+---
+
+Assuming you keep your soure tree in `src/`, which contains ES2015 syntax code, imports, CSS, etc, and the entry point is `src/myapp.js`.
+
+This single command (no config necessary) will do everything to validate, transpile, resolve modules, drop dead code, and compress into a single file:
 
 ```bash
-# Compile once
 $ crunch-webapp src/myapp.js out/myapp.js
+```
 
-# Compile continuously whenever a file changes
+The resulting file is now ready to be used directly in your web-app. It will even inject your CSS:
+
+```html
+<script src="myapp.js"></script>
+```
+
+File watching
+-------------
+
+You can leave crunchicorn running and it will automatically rebuild whenever it notices any files have changed:
+
+```bash
 $ crunch-webapp --watch src/myapp.js out/myapps.js
 ```
 
-Usage:
+Reference
+---------
+
+Core command:
 
 ```
 [crunch-webapp|crunch-lib] [... options] ENTRYPOINT OUTPUT
@@ -59,11 +78,11 @@ ENTRYPOINT          Entry point to your app (.js). Any dependencies (including C
 
 OUTPUT              Output JS file. For a webapp, this will also include auto-injected CSS. Use '-'
                     for stdout.
-
-
+```
 
 Common options:
 
+```
 -h --help           This.
 
 -w --watch          Keep running and automatically rebuild when any dependency changes.
@@ -75,11 +94,11 @@ Common options:
 --[semi|no]standard Fail if code does not meet coding standards. See http://standardjs.com
                     'standard' enforces no semicolons, 'semistandard' enforces semicolons,
                     'nostandard' bypasses checks. Default is --standard.
-
-
+```
 
 Advanced options:
 
+```
 -v --verbose        Show what's going on under the hood.
 
 --[no]minify        Whether to minify results or not. Default is to write both minified
@@ -100,8 +119,6 @@ Advanced options:
 --babelplugin PLUG  Additional Babel plugins to use. See https://babeljs.io/docs/plugins/.
                     Default is none (relies on babelpreset). This option can be specified
                     multiple times to include multiple plugins.
-
-
 ```
 
 Under the hood
