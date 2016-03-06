@@ -21,6 +21,10 @@ const argv = yargs
         describe: 'disable auto @font-face',
         type: 'boolean',
       },
+      'nolint': {
+        describe: 'do not lint source files',
+        type: 'boolean'
+      },
       'debug': {
         alias: 'd',
         describe: 'debug build (does not minify output)',
@@ -47,6 +51,7 @@ const src = argv._[0],
         minifyCss: !argv.debug,
         minifyJs: !argv.debug,
         fontMagician: !argv.nofontface,
+        lintJs: !argv.nolint,
         resolve: true,
       }
 
