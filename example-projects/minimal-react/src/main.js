@@ -12,7 +12,7 @@ import { MyComponent } from './component.jsx'
 function init() {
   log('starting...')
   ReactDOM.render(
-    <MyComponent msg="this is a component">,
+    <MyComponent msg="this is a component"/>,
     document.getElementById('app'))
 }
 

@@ -1,3 +1,7 @@
-Example React project.
+Example React project. The resulting app.js will contain everything, including React itself and CSS.
 
-To compile `npm run build`, then open public/index.html in your browser.
+To build:
+
+* `npm install`
+* `crunch src/main.js public/app.js`
+* open `public/index.html` in your web browser

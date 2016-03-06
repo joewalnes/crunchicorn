@@ -1,3 +1,6 @@
 Example project with no frameworks.
 
-To compile `npm run build`, then open public/index.html in your browser.
+To build:
+
+* `crunch src/main.js public/app.js`
+* open `public/index.html` in your web browser

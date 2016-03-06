@@ -8,5 +8,25 @@
  */
 
 body {
-  font-family: sans-serif;
+  /* font-family will auto be imported from google fonts */
+  font-family: "Alice", sans-serif;
+}
+
+/* custom properties */
+:root {
+--fontSize: 1rem;
+--mainColor: #12345678;
+--highlightColor: hwb(190, 35%, 20%);
+}
+
+body {
+color: var(--mainColor);
+font-size: var(--fontSize);
+line-height: calc(var(--fontSize) * 1.5);
+padding: calc((var(--fontSize) / 2) + 1px);
+}
+
+a {
+  color: color(var(--highlightColor) blackness(+20%));
+  transition: color 1s; /* autoprefixed ! */
 }
