@@ -2,6 +2,12 @@
 
 import React from 'react'
 
-export const MyComponent = ({msg}) => (
+const MyComponent = ({msg}) => (
   <button>{msg}</button>
 )
+
+MyComponent.propTypes = {
+  msg: React.PropTypes.string.isRequired
+}
+
+export { MyComponent }

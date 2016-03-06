@@ -9,10 +9,10 @@ import ReactDOM from 'react-dom'
 import { log } from './util.js'
 import { MyComponent } from './component.jsx'
 
-function init() {
+function init () {
   log('starting...')
   ReactDOM.render(
-    <MyComponent msg="this is a component"/>,
+    <MyComponent msg='this is a component'/>,
     document.getElementById('app'))
 }
 
