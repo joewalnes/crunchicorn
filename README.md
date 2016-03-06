@@ -48,8 +48,6 @@ Example projects
 File watching
 -------------
 
-*Note: not yet implemented*
-
 You can leave crunchicorn running and it will automatically rebuild whenever it notices any files have changed:
 
 ```bash

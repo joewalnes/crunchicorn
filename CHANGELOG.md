@@ -2,6 +2,12 @@
 
 ---
 
+## 0.0.2 (2016-03-05)
+
+#### [FEATURE] Now supports `--watch`
+
+---
+
 ## 0.0.1 (2016-03-05)
 
 First working version!
