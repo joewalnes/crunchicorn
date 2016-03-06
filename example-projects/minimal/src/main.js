@@ -7,7 +7,7 @@ import './styles.css'
 // Internal deps
 import { log } from './util.js'
 
-function init() {
+function init () {
   log('starting...')
   document.getElementById('app').textContent = 'Hello from JavaScript!'
 }
