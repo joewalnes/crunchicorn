@@ -23,7 +23,7 @@ crunchicorn was born out of frustration with how complicated it is to get JavaSc
 10 second tutorial
 ------------------
 
-Assuming you keep your soure tree in `src/`, which contains ES2015 syntax code, imports, CSS, etc, and the entry point is `src/myapp.js`.
+Assuming you keep your source tree in `src/`, which contains ES2015 syntax code, imports, CSS, etc, and the entry point is `src/myapp.js`.
 
 This single command (no config necessary) will do everything to validate, transpile, resolve modules, drop dead code, and compress into a single file:
 
