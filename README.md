@@ -100,5 +100,5 @@ Under the hood
 * automatically insert @font-face with [Font Magician](https://github.com/jonathantneal/postcss-font-magician)
 * shrink JS with [UglifyJS2](http://lisperator.net/uglifyjs/)
 * shrink CSS with [cssnano](http://cssnano.co/)
-* [TODO] lint JS with [StandardJS](http://standardjs.com/)
+* lint JS with [StandardJS](http://standardjs.com/)
 * [TODO] lint CSS with [stylelint](http://stylelint.io/)
