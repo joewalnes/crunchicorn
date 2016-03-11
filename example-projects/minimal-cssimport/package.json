@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "dependencies": {
+    "basscss": "^8.0.1",
+    "bootstrap": "^3.3.6"
+  }
+}
